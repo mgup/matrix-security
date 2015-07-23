@@ -1,0 +1,5 @@
+vshlyaga:
+  id: 1
+  email: 'vshlyaga@acm.org'
+  encrypted_password: '$2a$10$k0PVqH8Kw72/ggvZOpL49uejGeTp2xd9G0QzOUNdJNkfOAcr9uRti'
+  sign_in_count: 1

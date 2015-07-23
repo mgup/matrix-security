@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MatrixSecurity</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <%= stylesheet_link_tag    'matrix_security/application', media: 'all' %>
+
+  <%= javascript_include_tag 'vendor/modernizr' %>
+  <%= javascript_include_tag 'matrix_security/application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="contain-to-grid">
+  <nav class="top-bar" data-topbar role="navigation">
+    <section class="top-bar-section">
+      <ul class="left">
+        <li class="has-dropdown">
+          <a href="#">Безопасность</a>
+          <ul class="dropdown">
+            <li><a href="#">Пользователи</a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </nav>
+</div>
+<div class="row">
+  <div class="small-12 columns">
+    <% if flash[:alert] %>
+      <div data-alert class="alert-box alert radius">
+          <%= flash[:alert] %>
+          <a href="#" class="close">&times;</a>
+      </div>
+    <% end %>
+
+    <%= yield %>
+  </div>
+</div>
+</body>
+</html>
